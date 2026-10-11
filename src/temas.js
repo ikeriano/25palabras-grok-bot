@@ -1,0 +1,27 @@
+// Programas especiales (rejilla «Programa especial» del APK): colores del plató, saludo, hashtag y rótulo.
+const pal = (led, led2, acento, neon, banda, fondo) => ({ led, led2, acento, neon, banda, fondo });
+export const THEMES = {
+  normal: { name: 'Normal', emoji: '🔤', paleta: null, hashtag: '#25palabras' },
+  prime: { name: 'Especial Prime Time', emoji: '🌟', banner: 'ESPECIAL PRIME TIME', hashtag: '#25palabrasPrime', festivo: true, paleta: pal('#6a4cff', '#1a0a5a', '#ffd21a', 0xfff2b0, '#3a1a8a', 0x07040f),
+    saludo: '¡Bienvenidos a esta gala especial de 25 palabras en prime time, como aquella noche de enero de dos mil veintitrés!', extra: ['Esta noche cada palabra brilla más que nunca.'] },
+  halloween: { name: 'Halloween', emoji: '🎃', banner: 'ESPECIAL HALLOWEEN', hashtag: '#25palabrasHalloween', paleta: pal('#7a2aff', '#1a0430', '#ff7a00', 0xff8a2a, '#3a0a5a', 0x050208),
+    saludo: '¡Muajaja! Bienvenidos al especial de Halloween. Hoy las pistas dan miedo: calabaza, fantasma, bruja…' },
+  ninos: { name: 'Niños', emoji: '🧸', banner: 'ESPECIAL NIÑOS', hashtag: '#25palabrasNiños', festivo: true, paleta: pal('#00b4ff', '#004a8a', '#ffd60a', 0xffffff, '#ff5ca8', 0x02101a),
+    saludo: '¡Hola, chicos y chicas! Bienvenidos al especial infantil. ¡Hoy los que más palabras saben son los peques!' },
+  nochebuena: { name: 'Nochebuena', emoji: '🕯️', banner: 'ESPECIAL NOCHEBUENA', hashtag: '#25palabrasNochebuena', festivo: true, paleta: pal('#1a7a3a', '#021a08', '#ffd21a', 0xfff2c0, '#8a0010', 0x020804),
+    saludo: '¡Feliz Nochebuena! Hoy jugamos con turrón, villancicos y palabras muy navideñas.' },
+  navidad: { name: 'Navidad', emoji: '🎄', banner: 'ESPECIAL NAVIDAD', hashtag: '#25palabrasNavidad', festivo: true, paleta: pal('#1aa04a', '#022a0a', '#ff2a2a', 0xffffff, '#0a6a2a', 0x020c06),
+    saludo: '¡Feliz Navidad! Como cuando nos estrenamos, en diciembre: árbol, regalos y muchas palabras.' },
+  carnaval: { name: 'Carnaval', emoji: '🎭', banner: 'ESPECIAL CARNAVAL', hashtag: '#25palabrasCarnaval', festivo: true, paleta: pal('#a040ff', '#2a0450', '#33e6ff', 0xff4fa8, '#ff4fa8', 0x0a0214),
+    saludo: '¡Bienvenidos al especial de Carnaval! Disfraces, confeti y palabras con antifaz.' },
+  finano: { name: 'Fin de Año', emoji: '🥂', banner: 'ESPECIAL FIN DE AÑO', hashtag: '#25palabrasFinDeAño', festivo: true, paleta: pal('#5a5aaa', '#0a0a2a', '#ffd21a', 0xffe680, '#3a3a6a', 0x030308),
+    saludo: '¡Última noche del año en 25 palabras! Doce uvas y veinticinco pistas.' },
+  verano: { name: 'Verano', emoji: '🏖️', banner: 'ESPECIAL VERANO', hashtag: '#25palabrasVerano', paleta: pal('#00c8e0', '#005a7a', '#ffd166', 0xfff3b0, '#ef476f', 0x021018),
+    saludo: '¡Bienvenidos al especial de verano! Playa, sombrilla, helado… ¡ya sabéis cómo va esto!' },
+  sanvalentin: { name: 'San Valentín', emoji: '💘', banner: 'ESPECIAL SAN VALENTÍN', hashtag: '#25palabrasSanValentín', paleta: pal('#ff4d8d', '#4a0220', '#ffccd5', 0xffccd5, '#c9184a', 0x0c0204),
+    saludo: '¡Feliz San Valentín! Hoy la palabra más buscada es amor. Pero no la digáis, que es derivada de todo.' },
+  libro: { name: 'Día del Libro', emoji: '📚', banner: 'ESPECIAL DÍA DEL LIBRO', hashtag: '#25palabrasDíaDelLibro', festivo: true, paleta: pal('#c08a3a', '#3a2008', '#fff2c0', 0xfff2c0, '#8a3a1a', 0x080502),
+    saludo: '¡Feliz Día del Libro! Hoy rendimos homenaje a nuestra lengua, que para eso tenemos veinticinco palabras.' },
+  especial300: { name: 'Especial 300 suscriptores', emoji: '🏆', banner: 'ESPECIAL 300 SUSCRIPTORES', hashtag: '#25palabras300', festivo: true, paleta: pal('#d0a020', '#3a2a02', '#fff6c0', 0xffe680, '#b8860b', 0x070502),
+    saludo: '¡Bienvenidos a este 25 palabras tan especial! Está dedicado a los suscriptores del canal de YouTube «Ikeriano el campeón 2».', extra: ['¡Ya sois trescientos! Para daros las gracias me sobran veinticuatro palabras: ¡gracias!'] },
+};

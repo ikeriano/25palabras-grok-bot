@@ -1,0 +1,5 @@
+node_modules/
+tmp/
+capturas/
+tools/*.log
+*.zip
