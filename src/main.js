@@ -165,7 +165,9 @@ function Lt(p) {
   if (p === 'main') {
     col.append(mbtn('Jugar', 'Programa completo, entrenamiento, clásico…', 'gold', () => Lt('play')), mbtn('Opciones', 'Sonido, etapa, calidad gráfica, pantalla completa', '', () => Lt('options')),
       mbtn('La historia de 25 palabras', `${esc(cfg.presentador)} te cuenta la historia del programa`, '', () => iniciar('historia')), mbtn('Cómo se juega', 'Las reglas del concurso', '', () => Lt('help')), mbtn('Créditos', '', '', () => Lt('credits')));
-    if (!matchMedia('(display-mode: standalone), (display-mode: fullscreen)').matches) col.append(mbtn('Instalar app', 'Juega sin conexión desde tu pantalla de inicio', 'inst', instalar));
+    const enApk = location.hostname === 'appassets.androidplatform.net';
+    if (!enApk && !matchMedia('(display-mode: standalone), (display-mode: fullscreen)').matches) col.append(mbtn('Instalar app', 'Juega sin conexión desde tu pantalla de inicio', 'inst', instalar));
+    if (!enApk) col.append(mbtn('Descargar APK', 'Instala el juego en tu móvil Android', 'inst', () => window.open('https://github.com/ikeriano/25palabras-grok-bot/releases/latest', '_blank')));
   } else if (p === 'play') {
     col.append(mbtn('Programa completo', `Cabecera, ${E.repesca ? 'repesca, ' : ''}la apuesta, uno contra uno, pirámide, contrarreloj y las diez de últimas · bote ${M.esc(euros0(leerBote()))}`, 'gold', () => iniciar('programa')), mbtn('Entrenamiento', 'Practica cada prueba por separado', '', () => Lt('train')),
       mbtn('Clásico', 'El estreno de diciembre de 2022: sin repesca y con El intruso', '', () => iniciar('clasico')), mbtn('Explorar el plató', 'Pasea libremente por el plató 3D', '', () => iniciar('explorar')),
